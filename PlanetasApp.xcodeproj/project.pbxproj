@@ -13,6 +13,10 @@
 		84BF839F2964688D008C1F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BF839E2964688D008C1F9B /* Assets.xcassets */; };
 		84BF83A22964688D008C1F9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BF83A02964688D008C1F9B /* LaunchScreen.storyboard */; };
 		84BF83AA296468FD008C1F9B /* PlanetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF83A9296468FD008C1F9B /* PlanetsTableViewController.swift */; };
+		84BF83AD2964A133008C1F9B /* PlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF83AC2964A133008C1F9B /* PlanetCell.swift */; };
+		84BF83AF2964A53E008C1F9B /* PlanetBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF83AE2964A53E008C1F9B /* PlanetBrain.swift */; };
+		84BF83B12964A655008C1F9B /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF83B02964A655008C1F9B /* Planet.swift */; };
+		84BF83B32964B4EE008C1F9B /* PlanetStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF83B22964B4EE008C1F9B /* PlanetStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		84BF83A12964688D008C1F9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84BF83A32964688D008C1F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84BF83A9296468FD008C1F9B /* PlanetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsTableViewController.swift; sourceTree = "<group>"; };
+		84BF83AC2964A133008C1F9B /* PlanetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCell.swift; sourceTree = "<group>"; };
+		84BF83AE2964A53E008C1F9B /* PlanetBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetBrain.swift; sourceTree = "<group>"; };
+		84BF83B02964A655008C1F9B /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		84BF83B22964B4EE008C1F9B /* PlanetStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,27 @@
 		84BF839429646889008C1F9B /* PlanetasApp */ = {
 			isa = PBXGroup;
 			children = (
+				84BF83AB2964A10E008C1F9B /* Planets */,
 				84BF839529646889008C1F9B /* AppDelegate.swift */,
 				84BF839729646889008C1F9B /* SceneDelegate.swift */,
 				84BF839B29646889008C1F9B /* Main.storyboard */,
 				84BF839E2964688D008C1F9B /* Assets.xcassets */,
 				84BF83A02964688D008C1F9B /* LaunchScreen.storyboard */,
 				84BF83A32964688D008C1F9B /* Info.plist */,
-				84BF83A9296468FD008C1F9B /* PlanetsTableViewController.swift */,
 			);
 			path = PlanetasApp;
+			sourceTree = "<group>";
+		};
+		84BF83AB2964A10E008C1F9B /* Planets */ = {
+			isa = PBXGroup;
+			children = (
+				84BF83A9296468FD008C1F9B /* PlanetsTableViewController.swift */,
+				84BF83AC2964A133008C1F9B /* PlanetCell.swift */,
+				84BF83AE2964A53E008C1F9B /* PlanetBrain.swift */,
+				84BF83B02964A655008C1F9B /* Planet.swift */,
+				84BF83B22964B4EE008C1F9B /* PlanetStorage.swift */,
+			);
+			path = Planets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +159,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BF839629646889008C1F9B /* AppDelegate.swift in Sources */,
+				84BF83B12964A655008C1F9B /* Planet.swift in Sources */,
 				84BF83AA296468FD008C1F9B /* PlanetsTableViewController.swift in Sources */,
+				84BF83B32964B4EE008C1F9B /* PlanetStorage.swift in Sources */,
 				84BF839829646889008C1F9B /* SceneDelegate.swift in Sources */,
+				84BF83AF2964A53E008C1F9B /* PlanetBrain.swift in Sources */,
+				84BF83AD2964A133008C1F9B /* PlanetCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

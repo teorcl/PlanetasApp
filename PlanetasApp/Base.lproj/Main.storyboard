@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YjN-Zw-BFq">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21507"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +16,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetCell" id="f0D-w3-8Oc">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetCell" rowHeight="122" id="f0D-w3-8Oc" customClass="PlanetCell" customModule="PlanetasApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f0D-w3-8Oc" id="uju-ZF-ES2">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xhw-xN-cyE">
+                                            <rect key="frame" x="29.999999999999993" y="21" width="98.333333333333314" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="OLN-nM-ntD"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del planeta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQg-tm-kbd">
+                                            <rect key="frame" x="133.33333333333337" y="31" width="229.66666666666663" height="27"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="27" id="DOY-Os-sNX"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de satelites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYE-8T-t6u">
+                                            <rect key="frame" x="133.33333333333337" y="68" width="229.66666666666663" height="27"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="27" id="kFF-Fv-WYZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Xhw-xN-cyE" secondAttribute="bottom" constant="10" id="1sQ-Xm-1pv"/>
+                                        <constraint firstItem="Xhw-xN-cyE" firstAttribute="top" secondItem="uju-ZF-ES2" secondAttribute="topMargin" constant="10" id="B2t-gf-maP"/>
+                                        <constraint firstItem="cQg-tm-kbd" firstAttribute="top" secondItem="uju-ZF-ES2" secondAttribute="topMargin" constant="20" id="IeX-74-CWt"/>
+                                        <constraint firstItem="Xhw-xN-cyE" firstAttribute="width" secondItem="uju-ZF-ES2" secondAttribute="width" multiplier="0.25" id="Luh-Wb-2tQ"/>
+                                        <constraint firstItem="Xhw-xN-cyE" firstAttribute="centerY" secondItem="uju-ZF-ES2" secondAttribute="centerY" id="M11-hP-5VO"/>
+                                        <constraint firstItem="cQg-tm-kbd" firstAttribute="leading" secondItem="Xhw-xN-cyE" secondAttribute="trailing" constant="5" id="YlE-Ak-gz8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cQg-tm-kbd" secondAttribute="trailing" constant="10" id="ZBy-0u-Po4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="RYE-8T-t6u" secondAttribute="trailing" constant="10" id="gB3-a4-IYA"/>
+                                        <constraint firstItem="RYE-8T-t6u" firstAttribute="leading" secondItem="Xhw-xN-cyE" secondAttribute="trailing" constant="5" id="o5s-lw-Zz2"/>
+                                        <constraint firstItem="RYE-8T-t6u" firstAttribute="top" secondItem="cQg-tm-kbd" secondAttribute="bottom" constant="10" id="vFA-e1-PyN"/>
+                                        <constraint firstItem="Xhw-xN-cyE" firstAttribute="leading" secondItem="uju-ZF-ES2" secondAttribute="leadingMargin" constant="10" id="vyC-tT-nHM"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="namePlanetLabel" destination="cQg-tm-kbd" id="Im0-lF-yzp"/>
+                                    <outlet property="numberSatellitesLabel" destination="RYE-8T-t6u" id="XMr-Bq-gkm"/>
+                                    <outlet property="planetImageView" destination="Xhw-xN-cyE" id="tTI-2B-qBf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,7 +77,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJb-dd-GWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="12"/>
+            <point key="canvasLocation" x="-715" y="2"/>
         </scene>
     </scenes>
     <resources>
