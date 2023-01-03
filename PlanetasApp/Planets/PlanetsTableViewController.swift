@@ -13,6 +13,7 @@ class PlanetsTableViewController: UITableViewController {
     
     private struct Const {
         static let cellIdentifier = "PlanetCell"
+        static let segueDestination = "goToDetail"
     }
     
     let brain: PlanetBrainProtocol = PlanetBrain()
@@ -29,6 +30,11 @@ class PlanetsTableViewController: UITableViewController {
         cell.setNumberSatellites(planet.numberSatellites)
         cell.setPlanetImage(planetImage)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: Const.segueDestination, sender: self)
     }
     
 }

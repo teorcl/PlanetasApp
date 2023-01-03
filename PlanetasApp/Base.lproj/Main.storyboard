@@ -2,7 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YjN-Zw-BFq">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -74,10 +75,29 @@
                             <outlet property="delegate" destination="YjN-Zw-BFq" id="zSX-fk-NvC"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="4lU-yK-NNu" kind="presentation" identifier="goToDetail" modalPresentationStyle="automatic" id="PDC-Zb-EfW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJb-dd-GWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-715" y="2"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vkh-jQ-jsi">
+            <objects>
+                <viewController id="4lU-yK-NNu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r6w-41-ZoP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZY3-ph-KBV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eDA-0M-dHm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6eO-wF-4Ay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79" y="1"/>
         </scene>
     </scenes>
     <resources>
