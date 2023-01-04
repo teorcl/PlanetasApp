@@ -87,14 +87,83 @@
         <!--Detalle-->
         <scene sceneID="Vkh-jQ-jsi">
             <objects>
-                <viewController id="4lU-yK-NNu" sceneMemberID="viewController">
+                <viewController id="4lU-yK-NNu" customClass="PlanetDetailViewController" customModule="PlanetasApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r6w-41-ZoP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FTA-Oz-qg9">
+                                <rect key="frame" x="20" y="113" width="353" height="107.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planeta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg9-fg-TUQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAg-DT-J05">
+                                        <rect key="frame" x="0.0" y="26.333333333333343" width="353" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de satélites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46y-Fq-kKr">
+                                        <rect key="frame" x="0.0" y="46.666666666666657" width="353" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Periodo  orbital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zh8-Oa-KEz">
+                                        <rect key="frame" x="0.0" y="67" width="353" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distancia al sol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKH-Iy-gEZ">
+                                        <rect key="frame" x="0.0" y="87.333333333333343" width="353" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q75-Xu-JY1">
+                                <rect key="frame" x="20" y="251.66666666666669" width="353" height="148.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="jvE-d7-XsG"/>
+                                    <constraint firstAttribute="width" constant="353" id="sS7-1a-diJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J2o-fo-yMh">
+                                <rect key="frame" x="20" y="411.66666666666669" width="353" height="148.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="K5B-6y-Jcl"/>
+                                    <constraint firstAttribute="width" constant="353" id="jVg-qb-5Ra"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZY3-ph-KBV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FTA-Oz-qg9" firstAttribute="top" secondItem="ZY3-ph-KBV" secondAttribute="top" constant="10" id="Hck-20-ok9"/>
+                            <constraint firstItem="ZY3-ph-KBV" firstAttribute="trailing" secondItem="FTA-Oz-qg9" secondAttribute="trailing" constant="20" id="JC1-U7-p5b"/>
+                            <constraint firstItem="FTA-Oz-qg9" firstAttribute="leading" secondItem="ZY3-ph-KBV" secondAttribute="leading" constant="20" id="Nal-ll-am6"/>
+                            <constraint firstItem="q75-Xu-JY1" firstAttribute="top" secondItem="FTA-Oz-qg9" secondAttribute="bottom" constant="30" id="Xti-q8-jZK"/>
+                            <constraint firstItem="J2o-fo-yMh" firstAttribute="top" secondItem="q75-Xu-JY1" secondAttribute="bottom" constant="10" id="cIF-8f-VAd"/>
+                            <constraint firstItem="J2o-fo-yMh" firstAttribute="leading" secondItem="ZY3-ph-KBV" secondAttribute="leading" constant="20" id="eiD-9W-Z6L"/>
+                            <constraint firstItem="q75-Xu-JY1" firstAttribute="leading" secondItem="ZY3-ph-KBV" secondAttribute="leading" constant="20" id="f0S-v5-cOJ"/>
+                            <constraint firstItem="ZY3-ph-KBV" firstAttribute="trailing" secondItem="q75-Xu-JY1" secondAttribute="trailing" constant="20" id="ff9-Pt-1am"/>
+                            <constraint firstItem="ZY3-ph-KBV" firstAttribute="trailing" secondItem="J2o-fo-yMh" secondAttribute="trailing" constant="20" id="vh7-U1-s7I"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detalle" id="eDA-0M-dHm"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="yAg-DT-J05" id="DTO-2I-but"/>
+                        <outlet property="distanceToSunLabel" destination="mKH-Iy-gEZ" id="aDu-W7-Jq3"/>
+                        <outlet property="namePlanetLabel" destination="fg9-fg-TUQ" id="kgl-Sf-1gs"/>
+                        <outlet property="numberSatellitesLabel" destination="46y-Fq-kKr" id="Fhz-cZ-ndy"/>
+                        <outlet property="orbitalPeriodLabel" destination="zh8-Oa-KEz" id="KXe-n2-TUg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eO-wF-4Ay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,6 +189,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

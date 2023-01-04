@@ -41,7 +41,13 @@ class PlanetsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        brain.processPlanetSeleted()
+        brain.processPlanetSeleted(for: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let planetDetailViewController = segue.destination as? PlanetDetailViewController else { return }
+        let planetDetail = brain.getPlanetDetail()
+        planetDetailViewController.setPlanetDetail(planetDetail)
     }
     
 }
