@@ -29,8 +29,7 @@ extension PlanetTableStorage: PlanetTableStorageProtocol {
     }
     
     func getDetailPlanetForIndex(for index: Int) -> PlanetDetailDTO {
-        let planets = planetStorage.getPlanetsForTable()
-        let planet = planets[index]
-        return PlanetDetailDTO(name: planet.name, numberSatellites: planet.numberSatellites)
+        let planetDetail = planetStorage.getPlanetDetail(for: index)
+        return planetDetail
     }
 }

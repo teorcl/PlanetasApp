@@ -20,6 +20,9 @@ class PlanetDetailBrain {
     func updateUI(){
         setNamePlanet()
         setNumberSatellites()
+        setPlanetDescription()
+        setOrbitalPeriod()
+        setDistanceToSun()
     }
     
     func setNamePlanet(){
@@ -32,6 +35,24 @@ class PlanetDetailBrain {
         guard let planetDetail = planetDetail else { return }
         guard let viewController = viewController else { return}
         viewController.setNumberSatellites(planetDetail.numberSatellites)
+    }
+    
+    func setPlanetDescription(){
+        guard let planetDetail = planetDetail else { return }
+        guard let viewController = viewController else { return}
+        viewController.setPlanetDescription(planetDetail.description)
+    }
+    
+    func setOrbitalPeriod(){
+        guard let planetDetail = planetDetail else { return }
+        guard let viewController = viewController else { return}
+        viewController.setOrbitalPeriod(planetDetail.orbitalPeriod)
+    }
+    
+    func setDistanceToSun(){
+        guard let planetDetail = planetDetail else { return }
+        guard let viewController = viewController else { return}
+        viewController.setDistanceToSun(planetDetail.distanceToSun)
     }
 }
 

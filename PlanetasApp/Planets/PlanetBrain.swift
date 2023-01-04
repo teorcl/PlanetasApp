@@ -11,7 +11,7 @@ protocol PlanetBrainProtocol {
     func getNumberOfPlanets() -> Int
     func getPlanetForIndex(for index: Int) -> PlanetTableDTO
     func setTableViewController(_ tableViewController: PlanetsTableViewControllerProtocol)
-    func processPlanetSeleted(for index: Int) // Editar
+    func processPlanetSeleted(for index: Int) 
     func getPlanetDetail() -> PlanetDetailDTO
 }
 
@@ -42,7 +42,7 @@ extension PlanetBrain: PlanetBrainProtocol {
     
     func getPlanetDetail() -> PlanetDetailDTO {
         guard let planetDetail = planetDetail else {
-            return PlanetDetailDTO(name: "", numberSatellites: "")
+            return PlanetDetailDTO(name: "", numberSatellites: "", description: "", orbitalPeriod: "", distanceToSun: "")
         }
         return planetDetail
     }

@@ -13,7 +13,7 @@ struct Planet {
     let image: String
 //    let imageDetail1: String
 //    let imageDetail2: String
-//    let description: String
-//    let orbitalPeriod: String
-//    let distanceToSun: String
+    let description: String
+    let orbitalPeriod: String
+    let distanceToSun: String
 }

@@ -10,6 +10,9 @@ import UIKit
 protocol PlanetDetailViewControllerProtocol: AnyObject {
     func setNamePlanet(_ namePlanet: String)
     func setNumberSatellites(_ numberSatellites: String)
+    func setPlanetDescription(_ planetDescription: String)
+    func setOrbitalPeriod(_ orbitalPeriod: String)
+    func setDistanceToSun(_ distanceToSun: String)
 }
 
 class PlanetDetailViewController: UIViewController {
@@ -40,5 +43,17 @@ extension PlanetDetailViewController: PlanetDetailViewControllerProtocol {
     
     func setNumberSatellites(_ numberSatellites: String) {
         numberSatellitesLabel.text = "Número de satélites: \(numberSatellites)"
+    }
+    
+    func setPlanetDescription(_ planetDescription: String) {
+        descriptionLabel.text = planetDescription
+    }
+    
+    func setOrbitalPeriod(_ orbitalPeriod: String){
+        orbitalPeriodLabel.text = "Período orbital: \(orbitalPeriod)"
+    }
+    
+    func setDistanceToSun(_ distanceToSun: String){
+        distanceToSunLabel.text = "Distancia al sol: \(distanceToSun)"
     }
 }

@@ -42,6 +42,13 @@ class PlanetsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         brain.processPlanetSeleted(for: indexPath.row)
+        guard let cell = tableView.cellForRow(at: indexPath) else {return}
+        
+        if cell.accessoryType == .checkmark {
+            cell.accessoryType = .none
+        } else {
+            cell.accessoryType = .checkmark
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
