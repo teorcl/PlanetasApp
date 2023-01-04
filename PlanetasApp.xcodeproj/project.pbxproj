@@ -17,6 +17,8 @@
 		84BF83AF2964A53E008C1F9B /* PlanetBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF83AE2964A53E008C1F9B /* PlanetBrain.swift */; };
 		84BF83B12964A655008C1F9B /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF83B02964A655008C1F9B /* Planet.swift */; };
 		84BF83B32964B4EE008C1F9B /* PlanetStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF83B22964B4EE008C1F9B /* PlanetStorage.swift */; };
+		84BF83B529653DC0008C1F9B /* PlanetTableDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF83B429653DC0008C1F9B /* PlanetTableDTO.swift */; };
+		84BF83BB29655B05008C1F9B /* PlanetTableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF83BA29655B05008C1F9B /* PlanetTableStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		84BF83AE2964A53E008C1F9B /* PlanetBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetBrain.swift; sourceTree = "<group>"; };
 		84BF83B02964A655008C1F9B /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		84BF83B22964B4EE008C1F9B /* PlanetStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetStorage.swift; sourceTree = "<group>"; };
+		84BF83B429653DC0008C1F9B /* PlanetTableDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableDTO.swift; sourceTree = "<group>"; };
+		84BF83BA29655B05008C1F9B /* PlanetTableStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		84BF839429646889008C1F9B /* PlanetasApp */ = {
 			isa = PBXGroup;
 			children = (
+				84BF83B929655A29008C1F9B /* Commons */,
 				84BF83AB2964A10E008C1F9B /* Planets */,
 				84BF839529646889008C1F9B /* AppDelegate.swift */,
 				84BF839729646889008C1F9B /* SceneDelegate.swift */,
@@ -81,10 +86,19 @@
 				84BF83A9296468FD008C1F9B /* PlanetsTableViewController.swift */,
 				84BF83AC2964A133008C1F9B /* PlanetCell.swift */,
 				84BF83AE2964A53E008C1F9B /* PlanetBrain.swift */,
-				84BF83B02964A655008C1F9B /* Planet.swift */,
-				84BF83B22964B4EE008C1F9B /* PlanetStorage.swift */,
+				84BF83B429653DC0008C1F9B /* PlanetTableDTO.swift */,
+				84BF83BA29655B05008C1F9B /* PlanetTableStorage.swift */,
 			);
 			path = Planets;
+			sourceTree = "<group>";
+		};
+		84BF83B929655A29008C1F9B /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				84BF83B22964B4EE008C1F9B /* PlanetStorage.swift */,
+				84BF83B02964A655008C1F9B /* Planet.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +174,9 @@
 			files = (
 				84BF839629646889008C1F9B /* AppDelegate.swift in Sources */,
 				84BF83B12964A655008C1F9B /* Planet.swift in Sources */,
+				84BF83B529653DC0008C1F9B /* PlanetTableDTO.swift in Sources */,
 				84BF83AA296468FD008C1F9B /* PlanetsTableViewController.swift in Sources */,
+				84BF83BB29655B05008C1F9B /* PlanetTableStorage.swift in Sources */,
 				84BF83B32964B4EE008C1F9B /* PlanetStorage.swift in Sources */,
 				84BF839829646889008C1F9B /* SceneDelegate.swift in Sources */,
 				84BF83AF2964A53E008C1F9B /* PlanetBrain.swift in Sources */,

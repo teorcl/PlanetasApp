@@ -8,8 +8,7 @@
 import Foundation
 
 protocol PlanetStorageProtocol {
-    func getNumberOfPlanets() -> Int
-    func getPlanetForIndex(for index: Int) -> Planet
+    func getPlanetsForTable() -> [PlanetTableDTO]
 }
 
 class PlanetStorage {
@@ -27,13 +26,15 @@ class PlanetStorage {
 }
 
 extension PlanetStorage: PlanetStorageProtocol {
-    func getNumberOfPlanets() -> Int {
-        planets.count
+        
+    func getPlanetsForTable() -> [PlanetTableDTO] {
+        var planetTableStorage: [PlanetTableDTO] = []
+        for planet in planets {
+            let planetForTable: PlanetTableDTO
+            planetForTable = PlanetTableDTO(name: planet.name, numberSatellites: planet.numberSatellites, image: planet.image)
+            planetTableStorage.append(planetForTable)
+        }
+        return planetTableStorage
     }
-    
-    func getPlanetForIndex(for index: Int) -> Planet {
-        planets[index]
-    }
-    
     
 }
