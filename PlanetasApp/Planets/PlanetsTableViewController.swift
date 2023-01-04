@@ -7,7 +7,9 @@
 
 import UIKit
 
-
+protocol PlanetsTableViewControllerProtocol: AnyObject {
+    func navigateTowardsDetail()
+}
 
 class PlanetsTableViewController: UITableViewController {
     
@@ -17,6 +19,11 @@ class PlanetsTableViewController: UITableViewController {
     }
     
     let brain: PlanetBrainProtocol = PlanetBrain()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        brain.setTableViewController(self)
+    }
         
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         brain.getNumberOfPlanets()
@@ -34,6 +41,13 @@ class PlanetsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        brain.processPlanetSeleted()
+    }
+    
+}
+
+extension PlanetsTableViewController: PlanetsTableViewControllerProtocol {
+    func navigateTowardsDetail() {
         performSegue(withIdentifier: Const.segueDestination, sender: self)
     }
     

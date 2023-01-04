@@ -10,9 +10,12 @@ import Foundation
 protocol PlanetBrainProtocol {
     func getNumberOfPlanets() -> Int
     func getPlanetForIndex(for index: Int) -> Planet
+    func setTableViewController(_ tableViewController: PlanetsTableViewControllerProtocol)
+    func processPlanetSeleted() // Editar
 }
 
 class PlanetBrain {
+    weak var tableViewController: PlanetsTableViewControllerProtocol?
     let planetStotage: PlanetStorageProtocol = PlanetStorage()
 }
 
@@ -25,5 +28,12 @@ extension PlanetBrain: PlanetBrainProtocol {
         planetStotage.getPlanetForIndex(for: index)
     }
     
+    func setTableViewController(_ tableViewController: PlanetsTableViewControllerProtocol) {
+        self.tableViewController = tableViewController
+    }
     
+    func processPlanetSeleted() {
+        guard let tableViewController = tableViewController else {return}
+        tableViewController.navigateTowardsDetail()
+    }
 }
