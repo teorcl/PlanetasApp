@@ -16,16 +16,16 @@ protocol PlanetBrainProtocol {
 
 class PlanetBrain {
     weak var tableViewController: PlanetsTableViewControllerProtocol?
-    let planetStorage: PlanetTableStorageProtocol = PlanetTableStorage()
+    let planetTableStorage: PlanetTableStorageProtocol = PlanetTableStorage()
 }
 
 extension PlanetBrain: PlanetBrainProtocol {
     func getNumberOfPlanets() -> Int {
-        planetStorage.getNumberOfPlanets()
+        planetTableStorage.getNumberOfPlanets()
     }
     
     func getPlanetForIndex(for index: Int) -> PlanetTableDTO {
-        planetStorage.getPlanetForIndex(for: index)
+        planetTableStorage.getPlanetForIndex(for: index)
     }
     
     func setTableViewController(_ tableViewController: PlanetsTableViewControllerProtocol) {
