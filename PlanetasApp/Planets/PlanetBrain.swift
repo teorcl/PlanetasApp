@@ -13,9 +13,16 @@ protocol PlanetBrainProtocol {
     func setTableViewController(_ tableViewController: PlanetsTableViewControllerProtocol)
     func processPlanetSeleted(for index: Int) 
     func getPlanetDetail() -> PlanetDetailDTO
+    func updatePlanetsConsulted()
+    func wereAllPlanetsConsulted() -> Bool
+    func validateConsultedPlanets()
 }
 
 class PlanetBrain {
+    private struct Const {
+        static let message = "Todos los planetas fueron consultados"
+        static let title = "Consulta completa"
+    }
     weak var tableViewController: PlanetsTableViewControllerProtocol?
     let planetTableStorage: PlanetTableStorageProtocol = PlanetTableStorage()
     var planetDetail: PlanetDetailDTO?
@@ -38,6 +45,7 @@ extension PlanetBrain: PlanetBrainProtocol {
         guard let tableViewController = tableViewController else {return}
         self.planetDetail = planetTableStorage.getDetailPlanetForIndex(for: index)
         tableViewController.navigateTowardsDetail()
+        updatePlanetsConsulted()
     }
     
     func getPlanetDetail() -> PlanetDetailDTO {
@@ -45,5 +53,26 @@ extension PlanetBrain: PlanetBrainProtocol {
             return PlanetDetailDTO(name: "", numberSatellites: "", description: "", orbitalPeriod: "", distanceToSun: "")
         }
         return planetDetail
+    }
+    
+    func updatePlanetsConsulted() {
+        guard let tableViewController = tableViewController else {return}
+        tableViewController.increaseCounter()
+    }
+    
+    func wereAllPlanetsConsulted() -> Bool {
+        guard let tableViewController = tableViewController else {
+            return false
+        }
+        let planetsConsulted = tableViewController.getSelectedCells()
+        let totalPlanets = planetTableStorage.getNumberOfPlanets()
+        return planetsConsulted == totalPlanets
+    }
+    
+    func validateConsultedPlanets() {
+        if wereAllPlanetsConsulted() {
+            guard let tableViewController = tableViewController else { return }
+            tableViewController.presentAlert(with: Const.message, and: Const.title)
+        }
     }
 }
