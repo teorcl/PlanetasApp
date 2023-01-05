@@ -50,7 +50,7 @@ extension PlanetBrain: PlanetBrainProtocol {
     
     func getPlanetDetail() -> PlanetDetailDTO {
         guard let planetDetail = planetDetail else {
-            return PlanetDetailDTO(name: "", numberSatellites: "", description: "", orbitalPeriod: "", distanceToSun: "")
+            return PlanetDetailDTO(name: "", numberSatellites: "", description: "", orbitalPeriod: "", distanceToSun: "", planetImages: [])
         }
         return planetDetail
     }

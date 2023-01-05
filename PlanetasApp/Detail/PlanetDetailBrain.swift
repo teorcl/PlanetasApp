@@ -11,6 +11,7 @@ protocol PlanetDetailBrainProtocol {
     func setPlanetDetail(_ planetDetail: PlanetDetailDTO)
     func setViewController(_ viewController: PlanetDetailViewControllerProtocol)
     func processViewDidLoad()
+    func setPlanetImages()
 }
 
 class PlanetDetailBrain {
@@ -23,6 +24,7 @@ class PlanetDetailBrain {
         setPlanetDescription()
         setOrbitalPeriod()
         setDistanceToSun()
+        setPlanetImages()
     }
     
     func setNamePlanet(){
@@ -67,5 +69,12 @@ extension PlanetDetailBrain: PlanetDetailBrainProtocol {
     
     func processViewDidLoad() {
         updateUI()
+    }
+    
+    func setPlanetImages() {
+        guard let viewController = viewController else { return}
+        guard let planetDetail = planetDetail else { return }
+        let images = planetDetail.planetImages
+        viewController.setPlanetImages(images)
     }
 }

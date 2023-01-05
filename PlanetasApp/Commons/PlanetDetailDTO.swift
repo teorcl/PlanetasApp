@@ -13,4 +13,5 @@ struct PlanetDetailDTO {
     let description: String
     let orbitalPeriod: String
     let distanceToSun: String
+    let planetImages: [String]
 }

@@ -13,6 +13,7 @@ protocol PlanetDetailViewControllerProtocol: AnyObject {
     func setPlanetDescription(_ planetDescription: String)
     func setOrbitalPeriod(_ orbitalPeriod: String)
     func setDistanceToSun(_ distanceToSun: String)
+    func setPlanetImages(_ images: [String])
 }
 
 class PlanetDetailViewController: UIViewController {
@@ -24,6 +25,8 @@ class PlanetDetailViewController: UIViewController {
     @IBOutlet weak var numberSatellitesLabel: UILabel!
     @IBOutlet weak var orbitalPeriodLabel: UILabel!
     @IBOutlet weak var distanceToSunLabel: UILabel!
+    @IBOutlet var planetImages: [UIImageView]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,5 +58,11 @@ extension PlanetDetailViewController: PlanetDetailViewControllerProtocol {
     
     func setDistanceToSun(_ distanceToSun: String){
         distanceToSunLabel.text = "Distancia al sol: \(distanceToSun)"
+    }
+    
+    func setPlanetImages(_ images: [String]){
+        for i in 0...images.count-1 {
+            planetImages[i].image = UIImage(named: images[i])
+        }
     }
 }

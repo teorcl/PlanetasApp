@@ -163,6 +163,8 @@
                         <outlet property="namePlanetLabel" destination="fg9-fg-TUQ" id="kgl-Sf-1gs"/>
                         <outlet property="numberSatellitesLabel" destination="46y-Fq-kKr" id="Fhz-cZ-ndy"/>
                         <outlet property="orbitalPeriodLabel" destination="zh8-Oa-KEz" id="KXe-n2-TUg"/>
+                        <outletCollection property="planetImages" destination="q75-Xu-JY1" collectionClass="NSMutableArray" id="7j0-W2-4wV"/>
+                        <outletCollection property="planetImages" destination="J2o-fo-yMh" collectionClass="NSMutableArray" id="DQg-UZ-RCF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eO-wF-4Ay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -22,7 +22,7 @@ class PlanetsTableViewController: UITableViewController {
     }
     
     let brain: PlanetBrainProtocol = PlanetBrain()
-    var counterCellSelected = 0 //
+    var counterCellSelected = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
